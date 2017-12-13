@@ -1,3 +1,15 @@
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+startcar:
+    path:     /startcar
+    defaults: { _controller: AppBundle:Start:show }
+
+getcar:
+    path:     /getcar
+    defaults: { _controller: AppBundle:Start:getData }
+
+addcar:
+    path:     /addcar
+    defaults: { _controller: AppBundle:Start:addcar }

@@ -1,0 +1,27 @@
+AppBundle\Entity\Waybill:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\WaybillRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        number:
+            type: integer
+            unique: true
+        distance:
+            type: integer
+        fuel:
+            type: string
+            length: '10'
+    lifecycleCallbacks: {  }
+    manyToOne:
+        carNumber:
+            targetEntity: Avtomobile
+            inversedBy: waybills
+            joinColumn:
+                name: avto_number
+                referencedColumnName: numberavto

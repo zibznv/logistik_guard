@@ -1,0 +1,23 @@
+AppBundle\Entity\Driver:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\DriverRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: '20'
+            unique: true
+        age:
+            type: integer
+            nullable: false
+    lifecycleCallbacks: {  }
+
+    oneToOne:
+        car:
+            targetEntity: Avtomobile
