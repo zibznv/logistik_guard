@@ -1,0 +1,70 @@
+AppBundle\Entity\Cars_description:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\Cars_descriptionRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        idFirm:
+            type: integer
+            column: id_firm
+        modelCars:
+            type: string
+            length: 255
+            column: model_cars
+        typeCar:
+            type: string
+            length: 255
+            column: type_car
+        licensePlate:
+            type: string
+            length: 255
+            unique: true
+            column: license_plate
+        vehicleStatus:
+            type: string
+            length: 255
+            column: vehicle_status
+        trailerModel:
+            type: string
+            length: 255
+            column: trailer_model
+        licensePlateTrailer:
+            type: string
+            length: 255
+            unique: true
+            column: license_plate_trailer
+        yearOfManufacture:
+            type: date
+            column: year_of_manufacture
+        engineNumber:
+            type: string
+            length: 255
+            unique: true
+            column: engine_number
+        chassisNumber:
+            type: string
+            length: 255
+            unique: true
+            column: chassis_number
+        engineCapacity:
+            type: integer
+            column: engine_capacity
+        numberRegistrationCertificate:
+            type: string
+            length: 255
+            unique: true
+            column: number_registration_certificate
+        numberTrailerRegistrationCertificate:
+            type: string
+            length: 255
+            column: number_trailer_registration_certificate
+        carTireSize:
+            type: string
+            length: 255
+            column: car_tire_size
+    lifecycleCallbacks: {  }

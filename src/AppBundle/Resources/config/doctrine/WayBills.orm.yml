@@ -1,0 +1,88 @@
+AppBundle\Entity\WayBills:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\WayBillsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        idCompany:
+            type: integer
+            column: id_company
+        waybillNum:
+            type: string
+            length: 255
+            unique: true
+            column: waybill_num
+        idAvto:
+            type: integer
+            column: id_avto
+        idDriver:
+            type: integer
+            column: id_driver
+        idSmcard:
+            type: integer
+            column: id_smcard
+        season:
+            type: string
+            length: 255
+        dateTimeDeparture:
+            type: datetime
+            column: date_time_departure
+        dateTimeReturn:
+            type: datetime
+            column: date_time_return
+        travelTime:
+            type: time
+            column: travel_time
+        speedometerDeparture:
+            type: integer
+            column: speedometer_departure
+        speedometerReturn:
+            type: integer
+            column: speedometer_return
+        distanceSpd:
+            type: integer
+            column: distance_spd
+        distanceGps:
+            type: integer
+            column: distance_gps
+        bingoFuelDeparture:
+            type: integer
+            column: bingo_fuel_departure
+        refillLiters:
+            type: float
+            column: refill_liters
+        bingoFuelReturn:
+            type: integer
+            column: bingo_fuel_return
+        cargoWeight:
+            type: integer
+            column: cargo_weight
+        returnWeight:
+            type: integer
+            column: return_weight
+        parkingTime:
+            type: time
+            column: parking_time
+        fuelConsumption:
+            type: float
+            column: fuel_consumption
+        routeItinerary:
+            type: string
+            length: 255
+            column: route_itinerary
+        writeOffDate:
+            type: datetime
+            column: write_off_date
+        idStaff:
+            type: integer
+            column: id_staff
+        commentsWaybill:
+            type: text
+            nullable: true
+            column: comments_waybill
+    lifecycleCallbacks: {  }

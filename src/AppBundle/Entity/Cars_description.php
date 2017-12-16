@@ -1,0 +1,154 @@
+<?php
+
+namespace AppBundle\Entity;
+
+class Cars_description
+{
+    private $id;
+    private $idFirm;                                //ID компании списания
+    private $modelCars;                             //Модель автомобиля
+    private $typeCar;                               //Авто или погрузчик
+    private $licensePlate;                          //Госномер
+    private $vehicleStatus;                         //Статус
+    private $trailerModel;                          //Модель прицепа
+    private $licensePlateTrailer;                   //Госномер прицепа
+    private $yearOfManufacture;                     //Год изготовления
+    private $engineNumber;                          //Номер двигателя
+    private $chassisNumber;                         //Номер шасси
+    private $engineCapacity;                        //Объем двигателя
+    private $numberRegistrationCertificate;         //Номер техпаспорта амтомобиля
+    private $numberTrailerRegistrationCertificate;  //Номер техпаспорта полуприцепа
+    private $carTireSize;                           //Размер резины автомобиля
+
+    public function getId()
+    {
+        return $this->id;
+    }
+    public function setIdFirm($idFirm)
+    {
+        $this->idFirm = $idFirm;
+        return $this;
+    }
+    public function getIdFirm()
+    {
+        return $this->idFirm;
+    }
+    public function setModelCars($modelCars)
+    {
+        $this->modelCars = $modelCars;
+        return $this;
+    }
+    public function getModelCars()
+    {
+        return $this->modelCars;
+    }
+    public function setTypeCar($typeCar)
+    {
+        $this->typeCar = $typeCar;
+        return $this;
+    }
+    public function getTypeCar()
+    {
+        return $this->typeCar;
+    }
+    public function setLicensePlate($licensePlate)
+    {
+        $this->licensePlate = $licensePlate;
+        return $this;
+    }
+    public function getLicensePlate()
+    {
+        return $this->licensePlate;
+    }
+    public function setVehicleStatus($vehicleStatus)
+    {
+        $this->vehicleStatus = $vehicleStatus;
+        return $this;
+    }
+    public function getVehicleStatus()
+    {
+        return $this->vehicleStatus;
+    }
+    public function setTrailerModel($trailerModel)
+    {
+        $this->trailerModel = $trailerModel;
+        return $this;
+    }
+    public function getTrailerModel()
+    {
+        return $this->trailerModel;
+    }
+    public function setLicensePlateTrailer($licensePlateTrailer)
+    {
+        $this->licensePlateTrailer = $licensePlateTrailer;
+        return $this;
+    }
+    public function getLicensePlateTrailer()
+    {
+        return $this->licensePlateTrailer;
+    }
+    public function setYearOfManufacture($yearOfManufacture)
+    {
+        $this->yearOfManufacture = $yearOfManufacture;
+        return $this;
+    }
+    public function getYearOfManufacture()
+    {
+        return $this->yearOfManufacture;
+    }
+    public function setEngineNumber($engineNumber)
+    {
+        $this->engineNumber = $engineNumber;
+        return $this;
+    }
+    public function getEngineNumber()
+    {
+        return $this->engineNumber;
+    }
+    public function setChassisNumber($chassisNumber)
+    {
+        $this->chassisNumber = $chassisNumber;
+        return $this;
+    }
+    public function getChassisNumber()
+    {
+        return $this->chassisNumber;
+    }
+    public function setEngineCapacity($engineCapacity)
+    {
+        $this->engineCapacity = $engineCapacity;
+        return $this;
+    }
+    public function getEngineCapacity()
+    {
+        return $this->engineCapacity;
+    }
+    public function setNumberRegistrationCertificate($numberRegistrationCertificate)
+    {
+        $this->numberRegistrationCertificate = $numberRegistrationCertificate;
+        return $this;
+    }
+    public function getNumberRegistrationCertificate()
+    {
+        return $this->numberRegistrationCertificate;
+    }
+    public function setNumberTrailerRegistrationCertificate($numberTrailerRegistrationCertificate)
+    {
+        $this->numberTrailerRegistrationCertificate = $numberTrailerRegistrationCertificate;
+        return $this;
+    }
+    public function getNumberTrailerRegistrationCertificate()
+    {
+        return $this->numberTrailerRegistrationCertificate;
+    }
+    public function setCarTireSize($carTireSize)
+    {
+        $this->carTireSize = $carTireSize;
+        return $this;
+    }
+    public function getCarTireSize()
+    {
+        return $this->carTireSize;
+    }
+}
+

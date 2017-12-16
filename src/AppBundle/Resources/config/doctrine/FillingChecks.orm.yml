@@ -1,0 +1,58 @@
+AppBundle\Entity\FillingChecks:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\FillingChecksRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        idProvider:
+            type: integer
+            column: id_provider
+        idRecord:
+            type: integer
+            unique: true
+            column: id_record
+        numberPaperCheck:
+            type: integer
+            column: number_paper_check
+        dateTimeRefill:
+            type: datetime
+            column: date_time_refill
+        placeRefill:
+            type: string
+            length: 255
+            column: place_refill
+        typeOffFuel:
+            type: string
+            length: '25'
+            column: type_off_fuel
+        quantityLiters:
+            type: float
+            column: quantity_liters
+        pricePerLiter:
+            type: decimal
+            precision: '3'
+            scale: '3'
+            column: price_per_liter
+        smartCardNumber:
+            type: string
+            length: 255
+            column: smart_card_number
+        waybillNumber:
+            type: string
+            length: 255
+            column: waybill_number
+        loadOffDate:
+            type: datetime
+            column: load_off_date
+        writeOffDate:
+            type: datetime
+            column: write_off_date
+        idStaff:
+            type: integer
+            column: id_staff
+    lifecycleCallbacks: {  }
