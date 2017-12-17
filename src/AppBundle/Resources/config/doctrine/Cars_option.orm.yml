@@ -1,0 +1,70 @@
+AppBundle\Entity\Cars_option:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\Cars_optionRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        idCars:
+            type: integer
+            unique: true
+            column: id_cars
+        tankVolume:
+            type: integer
+            column: tank_volume
+        fuelType:
+            type: string
+            length: '25'
+            column: fuel_type
+        idSmartCard:
+            type: integer
+            column: id_smart_card
+        idDriver:
+            type: integer
+            unique: true
+            column: id_driver
+        cmcAllowed:
+            type: boolean
+            column: cmc_allowed
+        baseRateSummer:
+            type: float
+            column: base_rate_summer
+        baseRateWinter:
+            type: float
+            column: base_rate_winter
+        tonneKilometerRatio:
+            type: float
+            column: tonne_kilometer_ratio
+        normOnWarmup:
+            type: float
+            column: norm_on_warmup
+        standAloneHeaterRate:
+            type: float
+            column: stand_alone_heater_rate
+        maintenanceIntervals:
+            type: integer
+            column: maintenance_intervals
+        speedometerLastMaintenance:
+            type: integer
+            column: speedometer_last_maintenance
+        numberCheckupCoupon:
+            type: string
+            length: 255
+            unique: true
+            column: number_checkup_coupon
+        numberInsurancePolicy:
+            type: string
+            length: 255
+            unique: true
+            column: number_insurance_policy
+        maintenanceCouponDate:
+            type: date
+            column: maintenance_coupon_date
+        insurancePolicyCouponDate:
+            type: date
+            column: insurance_policy_coupon_date
+    lifecycleCallbacks: {  }

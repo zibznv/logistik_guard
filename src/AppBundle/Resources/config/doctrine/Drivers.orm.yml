@@ -1,0 +1,73 @@
+AppBundle\Entity\Drivers:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\DriversRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        id1C8:
+            type: string
+            length: 255
+            unique: true
+            column: id_1C8
+        drShortName:
+            type: string
+            length: '50'
+            column: dr_short_name
+        drSurname:
+            type: string
+            length: '50'
+            column: dr_surname
+        drName:
+            type: string
+            length: '50'
+            column: dr_name
+        drPatronymic:
+            type: string
+            length: '50'
+            column: dr_patronymic
+        drDocnum:
+            type: string
+            length: '50'
+            unique: true
+            column: dr_docnum
+        passNumber:
+            type: string
+            length: '255'
+            unique: true
+            column: pass_number
+        drPhone:
+            type: string
+            length: 255
+            unique: true
+            column: dr_phone
+        homeAddress:
+            type: string
+            length: 255
+            unique: true
+            column: home_address
+        dateOfBirth:
+            type: date
+            column: date_of_birth
+        drStatus:
+            type: string
+            length: '50'
+            column: dr_status
+        dateOfAcceptance:
+            type: date
+            column: date_of_acceptance
+        dateOfDismissal:
+            type: date
+            nullable: true
+            column: date_of_dismissal
+        drPhoto:
+            type: string
+            length: 255
+            nullable: true
+            unique: true
+            column: dr_photo
+    lifecycleCallbacks: {  }

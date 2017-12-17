@@ -1,0 +1,33 @@
+AppBundle\Entity\Smart:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\SmartRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        provider:
+            type: string
+            length: '50'
+        cardNumber:
+            type: string
+            length: '50'
+            unique: true
+            column: card_number
+        idFixedCar:
+            type: integer
+            nullable: true
+            unique: true
+            column: id_fixed_car
+        cardStatus:
+            type: string
+            length: '50'
+            column: card_status
+        cardComments:
+            type: string
+            length: 255
+            column: card_comments
+    lifecycleCallbacks: {  }
