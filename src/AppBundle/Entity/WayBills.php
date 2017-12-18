@@ -270,4 +270,33 @@ class WayBills
     {
         return $this->commentsWaybill;
     }
+    /**
+     * @var \AppBundle\Entity\Cars_description
+     */
+    private $carDes;
+
+
+    /**
+     * Set carDes
+     *
+     * @param \AppBundle\Entity\Cars_description $carDes
+     *
+     * @return WayBills
+     */
+    public function setCarDes(\AppBundle\Entity\Cars_description $carDes = null)
+    {
+        $this->carDes = $carDes;
+
+        return $this;
+    }
+
+    /**
+     * Get carDes
+     *
+     * @return \AppBundle\Entity\Cars_description
+     */
+    public function getCarDes()
+    {
+        return $this->carDes;
+    }
 }

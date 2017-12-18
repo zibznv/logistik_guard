@@ -1,13 +1,62 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/main.css">
+    {% block linkcssfile %}
+
+
+    {% endblock %}
+    <title>Guardlog by Symfony!</title>
+
+</head>
+
+<body>
+
+<header>
+    {% block header %}
+        <p>This is an important section of content on the page.</p>
+    {% endblock %}
+</header>
+<nav>
+    <ul>
+        <li><a href="/">CheckIn</a></li>
+        <li><a href="/cars">Cars</a></li>
+        <li><a href="/drivers">Drivers</a></li>
+        <li><a href="/waybills">Waybills</a></li>
+        <li><a href="/fueling">Fueling</a></li>
+        <li><a href="/event">Event</a></li>
+        <li><a href="/reports">Reports</a></li>
+        <li><a href="/setting">Setting</a></li>
+    </ul>
+</nav>
+<section id="leftsidebar">
+    {% block leftsidebar %}
+
+        <p>This is an important section of content on the page.</p>
+
+    {% endblock %}
+</section>
+<section id="maincontent">
+    {% block maincontent %}
+
+        <p>This is an important section of content on the page.</p>
+
+    {% endblock %}
+</section>
+<section id="rightsidebar">
+    {% block rightsidebar %}
+
+        <p>This is an important section of content on the page.</p>
+
+    {% endblock %}
+</section>
+<footer>
+    <p>Программный комплекс контроля логистики «GUARDLOG». Версия программы: 001-122017. &copy; Игорь Зайченко</p>
+</footer>
+
+</body>
 </html>
+
+

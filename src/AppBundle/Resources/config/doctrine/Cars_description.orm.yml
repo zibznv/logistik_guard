@@ -68,3 +68,7 @@ AppBundle\Entity\Cars_description:
             length: 255
             column: car_tire_size
     lifecycleCallbacks: {  }
+    oneToMany:
+        waybills: #Название переменной для связки в Cars_description
+            targetEntity: WayBills #название класса подчиненных объектов
+            mappedBy: carDes #название переменной для связки со стороны WayBills

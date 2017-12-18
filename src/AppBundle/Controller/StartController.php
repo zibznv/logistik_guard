@@ -10,11 +10,14 @@ namespace AppBundle\Controller;
 
 
 use AppBundle\Entity\Avtomobile;
+use AppBundle\Entity\Cars_description;
 use AppBundle\Entity\Driver;
 use AppBundle\Form\AvtomobileType;
+use AppBundle\Form\Cars_descriptionType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class StartController extends Controller
@@ -56,7 +59,31 @@ class StartController extends Controller
         return $this->render("start/index.html.twig");
     }
 
-    public function addcarAction()
+    public function addCarAction(Request $request)//*********
+    {
+        $newcar = new Cars_description();
+        $newcar->setEngineCapacity('5');
+
+        $formaddcar = $this->createForm(Cars_descriptionType::class, $newcar);
+        $formaddcar->handleRequest($request);
+
+
+        if($formaddcar->isSubmitted()){
+         //die("Form is send!");
+          if($formaddcar->isValid()){
+
+              $savemen = $this->getDoctrine()->getManager();
+              $savemen->persist($newcar);
+              $savemen->flush();
+
+          }
+
+
+        }
+
+        return $this->render("start/add-car.html.twig", array('addnewcar' => $formaddcar->createView()));
+    }
+    public function addcar1Action()
     {
         $car = new Avtomobile();
         /*

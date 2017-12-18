@@ -151,4 +151,3 @@ class Drivers
         return $this->drPhoto;
     }
 }
-

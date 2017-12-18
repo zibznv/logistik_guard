@@ -17,9 +17,6 @@ AppBundle\Entity\WayBills:
             length: 255
             unique: true
             column: waybill_num
-        idAvto:
-            type: integer
-            column: id_avto
         idDriver:
             type: integer
             column: id_driver
@@ -86,3 +83,10 @@ AppBundle\Entity\WayBills:
             nullable: true
             column: comments_waybill
     lifecycleCallbacks: {  }
+    manyToOne:
+        carDes: #Название переменной для связки в Cars_description
+            targetEntity: Cars_description #название класса связанного объекта
+            inversedBy: carDes #название переменной для связки со стороны WayBills
+            joinColumn: #название колонок для связки в базе данных
+                name: avto_id #название колонки в таблице пл
+                referencedColumnName: id #название поля в таблице карсдес по кот. связка (в данном случае ид)

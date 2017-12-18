@@ -2,6 +2,8 @@
 
 namespace AppBundle\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 class Cars_description
 {
     private $id;
@@ -149,5 +151,51 @@ class Cars_description
     public function getCarTireSize()
     {
         return $this->carTireSize;
+    }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $waybills;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->waybills = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add waybill
+     *
+     * @param \AppBundle\Entity\WayBills $waybill
+     *
+     * @return Cars_description
+     */
+    public function addWaybill(\AppBundle\Entity\WayBills $waybill)
+    {
+        $this->waybills[] = $waybill;
+
+        return $this;
+    }
+
+    /**
+     * Remove waybill
+     *
+     * @param \AppBundle\Entity\WayBills $waybill
+     */
+    public function removeWaybill(\AppBundle\Entity\WayBills $waybill)
+    {
+        $this->waybills->removeElement($waybill);
+    }
+
+    /**
+     * Get waybills
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getWaybills()
+    {
+        return $this->waybills;
     }
 }

@@ -12,4 +12,4 @@ getcar:
 
 addcar:
     path:     /addcar
-    defaults: { _controller: AppBundle:Start:addcar }
+    defaults: { _controller: AppBundle:Start:addCar }

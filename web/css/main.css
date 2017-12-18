@@ -1,0 +1,83 @@
+body {
+    margin: 1%;
+    padding: 0;
+}
+body p {
+    margin: 0%;
+    padding: 0;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 8px;
+    background-color: #dddddd;
+    overflow: hidden;
+    border: 1px solid black;
+}
+nav ul li {
+    float: left;
+    margin-left: 5px;
+}
+nav ul li a {
+    display: block;
+    border: 1px solid black;
+    text-decoration: none;
+    padding: 3px 5px;
+    text-align: center;
+    color: blue;
+    border-radius: 3px;
+    background-color: yellow;
+}
+nav ul li a:hover {
+    background-color: green;
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+header {
+    margin: 0;
+    padding: 3px;
+    background-color: grey;
+    border: 1px solid black;
+    margin-bottom: 2px;
+}
+footer {
+    margin: 0;
+    padding: 0px;
+    background-color: grey;
+    border: 1px solid black;
+    clear: both;
+}
+footer p{
+    margin: 0;
+    padding: 5px;
+}
+section#leftsidebar {
+    float: left;
+    width: 15%;
+    margin: 0;
+    padding: 3px;
+    background-color: grey;
+    border: 1px solid black;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+section#maincontent {
+    float: left;
+    width: 67%;
+    padding: 3px;
+    background-color: grey;
+    border: 1px solid black;
+    margin-top: 2px;
+    margin-left: 3px;
+    margin-bottom: 2px;
+}
+section#rightsidebar {
+    float: left;
+    width: 15%;
+    padding: 3px;
+    background-color: grey;
+    border: 1px solid black;
+    margin-top: 2px;
+    margin-left: 3px;
+    margin-bottom: 2px;
+}
