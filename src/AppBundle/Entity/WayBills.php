@@ -299,4 +299,50 @@ class WayBills
     {
         return $this->carDes;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $fillingChecks;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->fillingChecks = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add fillingCheck
+     *
+     * @param \AppBundle\Entity\FillingChecks $fillingCheck
+     *
+     * @return WayBills
+     */
+    public function addFillingCheck(\AppBundle\Entity\FillingChecks $fillingCheck)
+    {
+        $this->fillingChecks[] = $fillingCheck;
+
+        return $this;
+    }
+
+    /**
+     * Remove fillingCheck
+     *
+     * @param \AppBundle\Entity\FillingChecks $fillingCheck
+     */
+    public function removeFillingCheck(\AppBundle\Entity\FillingChecks $fillingCheck)
+    {
+        $this->fillingChecks->removeElement($fillingCheck);
+    }
+
+    /**
+     * Get fillingChecks
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getFillingChecks()
+    {
+        return $this->fillingChecks;
+    }
 }

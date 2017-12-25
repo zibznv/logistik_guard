@@ -8,11 +8,7 @@
 
 namespace AppBundle\Controller;
 
-
-use AppBundle\Entity\Avtomobile;
 use AppBundle\Entity\Cars_description;
-use AppBundle\Entity\Driver;
-use AppBundle\Form\AvtomobileType;
 use AppBundle\Form\Cars_descriptionType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;

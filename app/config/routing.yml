@@ -2,14 +2,26 @@ app:
     resource: '@AppBundle/Controller/'
     type: annotation
 
-startcar:
-    path:     /startcar
-    defaults: { _controller: AppBundle:Start:show }
+addCarsDescription:
+    path:     /addCarsDescription
+    defaults: { _controller: AppBundle:Setting:addCarsDescription }
 
-getcar:
-    path:     /getcar
-    defaults: { _controller: AppBundle:Start:getData }
+addCarsOption:
+    path:     /addCarsOption
+    defaults: { _controller: AppBundle:Setting:addCarsOption }
 
-addcar:
-    path:     /addcar
-    defaults: { _controller: AppBundle:Start:addCar }
+addDriver:
+    path:     /addDriver
+    defaults: { _controller: AppBundle:Setting:addDriver }
+
+addFillingCheck:
+    path:     /addFillingCheck
+    defaults: { _controller: AppBundle:Setting:addFillingCheck }
+
+addSmart:
+    path:     /addSmart
+    defaults: { _controller: AppBundle:Setting:addSmart }
+
+addWayBill:
+    path:     /addWayBill
+    defaults: { _controller: AppBundle:Setting:addWayBill }

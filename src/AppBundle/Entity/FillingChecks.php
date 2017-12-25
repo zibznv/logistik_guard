@@ -140,4 +140,33 @@ class FillingChecks
     {
         return $this->idStaff;
     }
+    /**
+     * @var \AppBundle\Entity\WayBills
+     */
+    private $waybillId;
+
+
+    /**
+     * Set waybillId
+     *
+     * @param \AppBundle\Entity\WayBills $waybillId
+     *
+     * @return FillingChecks
+     */
+    public function setWaybillId(\AppBundle\Entity\WayBills $waybillId = null)
+    {
+        $this->waybillId = $waybillId;
+
+        return $this;
+    }
+
+    /**
+     * Get waybillId
+     *
+     * @return \AppBundle\Entity\WayBills
+     */
+    public function getWaybillId()
+    {
+        return $this->waybillId;
+    }
 }

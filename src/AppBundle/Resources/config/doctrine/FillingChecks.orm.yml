@@ -42,10 +42,6 @@ AppBundle\Entity\FillingChecks:
             type: string
             length: 255
             column: smart_card_number
-        waybillNumber:
-            type: string
-            length: 255
-            column: waybill_number
         loadOffDate:
             type: datetime
             column: load_off_date
@@ -56,3 +52,10 @@ AppBundle\Entity\FillingChecks:
             type: integer
             column: id_staff
     lifecycleCallbacks: {  }
+    manyToOne:
+        waybillId: #Название переменной для связки с WayBills (свойство объекта)
+            targetEntity: WayBills #название класса связанного объекта
+            inversedBy: waybillId #название переменной для связки со стороны FillingChecks
+            joinColumn: #название колонок для связки в базе данных
+                name: waybill_id #название колонки в таблице FillingChecks
+                referencedColumnName: id #название поля в таблице WayBills по кот. связка (в данном случае ид)
